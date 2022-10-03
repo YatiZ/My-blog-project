@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} 
+My Blog
+{% endblock %} 
+{% block css_files %} 
+<link rel="stylesheet" href="{% static "post.css" %}">
+<link rel="stylesheet" href="{% static "index.css" %}">
+{% endblock %}
+{% block content %} 
+<header id="main-navigation">
+    <h1><a href="">Yati's Blog</a></h1>
+    <nav>
+        <a href="">All Posts</a>
+    </nav>
+</header>
+<section id="welcome">
+    <header>
+        <img src="{% static "minions.png" %}" alt="Yati- The Author Of This Blog">
+        <h2>YATIHTUN'S BLOG</h2>
+    </header>
+    <p>Hi,I am Yati Htun. I would like to tell you about my journeys.</p>
+</section>
+
+<section id="latest-posts">
+    <h2>My life history</h2>
+<ul>
+    {% include "post.html" %}
+</ul>
+</section>
+
+<section id="about">
+  <h2>What I Do</h2>
+  <p>I love programming, I love to make many projects and I am always eager to learn new technologies that are able to help my projects better. </p>
+  <p> I wish to be a successful computer scientist who adapt technology to help the human race evolve. I try to become more advanced modal world with the help of my technological knowledge. I cannot wait to take my programming endeavors to new heights and look forward to seeing how my skills improve in the future.</p>
+</section>
+{% endblock %}
