@@ -2,11 +2,11 @@
 
 <li>
     <article class="post">
-       <a href="{% url "post-detail-page" "volunteer" %}">
-        <img src="https://bit.ly/3EbU5Th" alt="My Volunteering Journeys">
+       <a href="{% url "post-detail-page" post.slug %}">
+        <img src="{% static "images/"|add:post.image %}" alt="{{post.title}}">
         <div class="post_content">
-            <h3>My Volunteering Journeys</h3>
-            <p> I was one of the member of buddhist organization in university. I incorporated in arranging religious festivals where our inspired monks give speeches for youths what to do and not to do in their lives. 
+            <h3>{{post.title}}</h3>
+            <p> {{post.excerpt}}
             </p>
         </div>
        </a>
